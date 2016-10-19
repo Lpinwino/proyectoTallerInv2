@@ -1,0 +1,14 @@
+<!-- home.html -->
+
+{% extends "base.html" %}
+{% load staticfiles %}
+{% block title %}Welcome to Django{% endblock %}
+{% block head %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/home.css '%}"
+{% endblock %}
+{% block content %}
+    <h1> Bienvenido  {{ user.username }} !!! </h1>
+    <h3>Aqui empieza el Cuestionario </h3>
+    <img src='/static/images/CUESTIONARIO.jpg'>
+    <button type="button" onclick="window.location.href='/logout/' ">Logout</button>
+{% endblock %}
